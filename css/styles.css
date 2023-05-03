@@ -1,0 +1,144 @@
+/* Global styles for the page */
+body {
+    background-color: #EDEFEE;
+    font-family: 'Markazi Text', serif;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Styles for heading tags*/
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+
+/* Styles for the image in the header tag */
+header > img {
+    height: auto;
+    width: 50%;
+    max-width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styles for the navigation */
+nav {
+    background-color: #26877F;
+    border-radius: 5%;
+}
+.container-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    list-style: none;
+    font-size: 2rem;
+    padding: 0 20px;
+}
+.container-nav a {
+    display: inline-block;
+    padding: 25px;
+    margin: 0 25px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    box-shadow: inset 0 0 0 0 #ffffff;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.container-nav a:hover {
+    box-shadow: inset 1000px 0 0 0 #ffffff;
+    color: #26877F;
+}
+
+/* Styles for the sections */
+section {
+    display: flex;
+}
+.promotion-section-container {
+    color: white;
+    background-image: url(../assets/garden-hero.jpg);
+    background-size: cover;
+}
+.offers-section-container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Styles for the articles */
+article p {
+    font-size: 1.5rem;
+}
+.offer-article {
+    max-width: 500px;
+    background-color: #26877F;
+    color: white;
+    border-radius: 5%;
+    padding: 25px;
+    margin-top: 2%;
+    box-shadow: 10px 10px 5px 12px;
+    transition: background-color .3s ease-in-out;
+}
+.offer-article img {
+    width: 100%;
+    height: auto;
+}
+.offer-article:hover {
+    background-color: #87262E ;
+}
+.promotion-article {
+    flex: 1;
+    padding: 20px;
+    background-color: #87262E ;
+}
+
+/* Styles for the footer */
+footer {
+    font-size: 1.5rem;
+    margin-top: 3%;
+    display: flex;
+    align-items: flex-end;
+}
+footer p {
+    border-top: 1px solid #87262E;
+    float: right;
+}
+footer div {
+    flex: 1;
+}
+footer div > img {
+    width: 75px;
+    height: 150px;
+}
+
+/* Styles for screens with a maximum width of 1440px */
+@media screen and (max-width: 1440px) {
+    /* Hide background image on screens smaller than 1440px */
+    .promotion-section-container {
+      background-image: none;
+    }
+    /* Section fills space if screen is smaller than 1440px*/
+    .promotion-section-container {
+        max-width: 100%;
+    }
+  }
+
+/* Styles for screens with a maximum width of 768px (mobile devices) */
+@media only screen and (max-width: 768px) {
+    /* Remove all p tag text but the first from the promotional article for mobile*/
+    .promotion-article p:nth-child(3), .promotion-article p:nth-child(4) {
+         display: none;
+    }
+  }
+
+/* Styles for screens larger than 1440px */
+@media (min-width: 1441px) {
+    /* Gives room for background images */
+    .promotion-article {
+      max-width: 45%;
+    }
+  }
